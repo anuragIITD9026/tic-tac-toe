@@ -69,6 +69,9 @@ def move():
     board = data['board']
     row, col = best_move(board)
     return jsonify({'row': row, 'col': col})
+@app.route('/')
+def home():
+    return "AI Tic-Tac-Toe Backend is Running!"
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))  # Use PORT env from Render
